@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "allowAzureIps": {
+      "value": false
+    },
+    "enableADS": {
+      "value": false
+    },
+    "location": {
+      "value": "canadacentral"
+    },
+    "serverName": {
+      "value": "Sancc012"
+    },
+    "enableVA": {
+      "value": false
+    },
+    "vaStoragelessEnabled": {
+      "value": false
+    },
+    "useVAManagedIdentity": {
+      "value": false
+    },
+    "serverTags": {
+      "value": {}
+    },
+    "minimalTlsVersion": {
+      "value": "1.2"
+    },
+    "publicNetworkAccess": {
+      "value": "disabled"
+    },
+    "administratorLogin": {
+      "value": "johnadmin"
+    },
+    "administratorLoginPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/1a599dc9-e029-4645-a794-a46ab637b821/resourceGroups/TerraformRG/providers/Microsoft.KeyVault/vaults/mykeyvault04cc"
+        },
+        "secretName": "myvaultcc05cc"
+      }
+    },
+    "identity": {
+      "value": {
+        "type": "None"
+      }
+    },
+    "primaryUserAssignedIdentityId": {
+      "value": ""
+    },
+    "federatedClientId": {
+      "value": ""
+    },
+    "servicePrincipal": {
+      "value": {
+        "type": "None"
+      }
+    }
+  }
+}
